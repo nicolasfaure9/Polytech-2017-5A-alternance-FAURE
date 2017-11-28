@@ -7,4 +7,7 @@
     <string name="TVST">équipe A contre équipe B</string>
     <string name="unVSunEL">1 contre 1 en ligne</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
