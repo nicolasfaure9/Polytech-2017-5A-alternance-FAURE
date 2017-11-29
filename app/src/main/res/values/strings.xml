@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Lab 01</string>
+    <string name="txtEnligne">En Ligne</string>
+    <string name="txtHorsLigne">Hors Ligne</string>
+    <string name="unVSun">1 contre 1</string>
+    <string name="unVSIA">1 contre IA</string>
+    <string name="TVST">équipe A contre équipe B</string>
+    <string name="unVSunEL">1 contre 1 en ligne</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

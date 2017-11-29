@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Lab 01</string>
+    <string name="txtEnligne">Online</string>
+    <string name="txtHorsLigne">Offline</string>
+    <string name="unVSun">1 vs 1</string>
+    <string name="unVSIA">1 vs IA</string>
+    <string name="TVST">Team A vs Team B</string>
+    <string name="unVSunEL">1 vs 1 Online</string>
+
+</resources>
