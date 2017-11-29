@@ -6,82 +6,12 @@
     android:layout_height="match_parent"
     tools:context="com.example.epulapp.lab01.MainActivity">
 
-    <ScrollView
+
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/fragment">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txtHorsLigne"
-                android:textSize="30sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="79dp"
-                android:orientation="horizontal">
-
-                <Button
-                    android:id="@+id/button1v1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/unVSun"
-                    android:textAllCaps="false" />
-
-                <Button
-                    android:id="@+id/buttonFragm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/unVSIA"
-                    android:textAllCaps="false" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="match_parent"
-                android:layout_height="61dp"
-                android:text="@string/TVST"
-                android:textAllCaps="false" />
-
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="124dp" />
-
-            <TextView
-
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/txtEnligne"
-                android:textSize="30sp" />
-
-
-            <Button
-                android:id="@+id/button6"
-                android:layout_width="match_parent"
-                android:layout_height="65dp"
-                android:text="@string/unVSunEL"
-                android:textAllCaps="false" />
-
-        </LinearLayout>
-    </ScrollView>
-
+    </android.support.constraint.ConstraintLayout>
 </android.support.constraint.ConstraintLayout>
+

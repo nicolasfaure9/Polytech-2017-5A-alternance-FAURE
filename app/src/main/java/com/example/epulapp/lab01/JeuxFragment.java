@@ -1,9 +1,14 @@
 package com.example.epulapp.lab01;
 
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Fragment;
+import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +22,20 @@ public class JeuxFragment extends Fragment {
     public JeuxFragment() {
         // Required empty public constructor
     }
+
+    @Override
+    public void onResume() {
+
+        super.onResume();
+        Intent intent = new Intent();
+        intent.setAction("com.example.SendBroadcast");
+        // add data
+        // intent.putExtra("message", "test");
+        getActivity().sendBroadcast(intent);
+        Log.d("JEUX FRAG","On Resume");
+
+     }
+
 
 
     public static JeuxFragment newInstance(String param1, String param2) {
