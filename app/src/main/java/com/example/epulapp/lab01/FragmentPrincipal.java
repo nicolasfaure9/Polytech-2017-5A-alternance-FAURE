@@ -23,7 +23,15 @@ public class FragmentPrincipal extends Fragment {
     public FragmentPrincipal() {
         // Required empty public constructor
     }
+    clickInterface interfaceClick;
 
+    public void setInterface(clickInterface interfaceClick) {
+        this.interfaceClick = interfaceClick;
+    }
+
+    public void onClick(View v) {
+        interfaceClick.buttonClicked();
+    }
 
     public static FragmentPrincipal newInstance(String param1, String param2) {
         FragmentPrincipal fragment = new FragmentPrincipal();
@@ -49,14 +57,11 @@ public class FragmentPrincipal extends Fragment {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
+                interfaceClick = (clickInterface) getActivity();
+                interfaceClick.buttonClicked();
                 Log.d("Mon depuis Fragement","On Click");
                 // Start NewActivity.class
-                FragmentTransaction ft = getActivity().getFragmentManager().beginTransaction();
-                JeuxFragment bdf = new JeuxFragment();
-                ft.replace(R.id.fragment, bdf);
-                ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
 
-                ft.commit();
             }
         });
 
