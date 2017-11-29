@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".JeuActivite" />
-        <activity android:name=".ActiviteFragment"></activity>
+        <activity android:name=".ActivityBiere"></activity>
     </application>
 
 </manifest>
