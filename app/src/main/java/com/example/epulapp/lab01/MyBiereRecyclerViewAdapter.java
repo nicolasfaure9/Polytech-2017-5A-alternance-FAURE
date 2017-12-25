@@ -48,8 +48,9 @@ public class MyBiereRecyclerViewAdapter extends RecyclerView.Adapter<MyBiereRecy
         holder.mItem = mValues.get(position);
         holder.mNameView.setText(mValues.get(position).name);
         holder.mAbvView.setText(mValues.get(position).abv);
-        if (holder.mImage != null) {
-            new MyDownloadImageAsyncTask(holder.mImage).execute(mValues.get(position).image_url);
+        if (holder.mImage != null && mValues.get(position).getImgBiere()==null) {
+            new MyDownloadImageAsyncTask(holder.mImage,mValues.get(position)).execute(mValues.get(position).image_url);
+
         }
 
         //AsyncTask<String, Void, Bitmap> task =  new MyDownloadImageAsyncTask().execute(mValues.get(position).image_url);

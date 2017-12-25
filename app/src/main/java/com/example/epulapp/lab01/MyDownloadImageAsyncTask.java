@@ -6,6 +6,8 @@ import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.widget.ImageView;
 
+import com.example.epulapp.lab01.dummy.Biere;
+
 import java.io.InputStream;
 import java.lang.ref.WeakReference;
 import java.net.HttpURLConnection;
@@ -17,9 +19,10 @@ import java.net.URL;
 
 public class MyDownloadImageAsyncTask extends AsyncTask<String, Void,Bitmap> {
     private final WeakReference<ImageView> imageViewReference;
-
-    public MyDownloadImageAsyncTask(ImageView imageView) {
+private Biere biere;
+    public MyDownloadImageAsyncTask(ImageView imageView, Biere biere) {
         imageViewReference = new WeakReference<ImageView>(imageView);
+        this.biere = biere;
     }
 
     @Override
@@ -38,6 +41,7 @@ public class MyDownloadImageAsyncTask extends AsyncTask<String, Void,Bitmap> {
             if (imageView != null) {
                 if (bitmap != null) {
                     imageView.setImageBitmap(bitmap);
+                    biere.setImgBiere(bitmap);
                 } else {
                     //Drawable placeholder = imageView.getContext().getResources().getDrawable(R.drawable.placeholder);
                     //imageView.setImageDrawable(placeholder);

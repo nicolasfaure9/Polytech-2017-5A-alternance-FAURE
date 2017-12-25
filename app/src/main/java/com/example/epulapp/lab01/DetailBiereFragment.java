@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.epulapp.lab01.dummy.Biere;
@@ -68,10 +69,12 @@ public class DetailBiereFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_detail_biere, container, false);
 
-        Button button = (Button) view.findViewById(R.id.button1v1);
-        TextView idTextV = (TextView) view.findViewById(R.id.id);
+
+
         TextView nameTextV = (TextView) view.findViewById(R.id.name);
-        idTextV.setText(maBiere.id);
+        ImageView imgView =(ImageView)view.findViewById(R.id.img);
+
+        imgView.setImageBitmap(maBiere.getImgBiere());
         nameTextV.setText(maBiere.name);
         return view;
     }

@@ -22,6 +22,8 @@ public class ActivityBiere extends AppCompatActivity implements BiereClick {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        if(savedInstanceState == null) {
             FragmentTransaction ft = getFragmentManager().beginTransaction();
             BiereFragment bdf = new BiereFragment();
 
@@ -29,6 +31,8 @@ public class ActivityBiere extends AppCompatActivity implements BiereClick {
             ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
             ft.addToBackStack(null);
             ft.commit();
+
+        }
 
     }
 

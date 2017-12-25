@@ -1,5 +1,7 @@
 package com.example.epulapp.lab01.dummy;
 
+import android.graphics.Bitmap;
+
 import com.google.gson.annotations.SerializedName;
 
 /**
@@ -18,6 +20,8 @@ public class Biere {
     @SerializedName("image_url")
     public final String image_url;
 
+    private Bitmap imgBiere;
+
 
         public Biere(String id, String content, String abv,String image_url) {
             this.id = id;
@@ -26,6 +30,13 @@ public class Biere {
             this.image_url=image_url;
         }
 
+        public void setImgBiere(Bitmap img){
+            this.imgBiere = img;
+        }
+
+        public Bitmap getImgBiere(){
+            return this.imgBiere;
+        }
 
     }
 

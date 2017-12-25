@@ -137,7 +137,7 @@ public class BiereFragment extends Fragment {
                 recyclerView.setAdapter(new MyBiereRecyclerViewAdapter(bieres, R.layout.fragment_biere_list, context));
 
                // recyclerView.setAdapter(new MyBiereRecyclerViewAdapter(bieres,mListener ));
-                Log.d(TAG, "Number of movies received: " + bieres.size());
+                Log.d(TAG, "Number of beers received: " + bieres.size());
 
                 recyclerView.addOnItemTouchListener(
                         new RecyclerItemClickListener(context, recyclerView ,new RecyclerItemClickListener.OnItemClickListener()  {
